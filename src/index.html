@@ -3,27 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Beat The Dealer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Rubik:ital,wght@0,300..900;1,300..900&family=VT323&display=swap"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div>
+      <h2 class="neonText pacifico-regular">Beat the Dealer Game</h2>
+      <div class="name-input rubik">
+        <input type="text" id="player-name" placeholder="enter your name:" />
       </div>
     </div>
+    <div id="header">
+      <button id="play" class="chip rubik">Play</button>
+      <button id="reset" class="chip rubik">Reset Game</button>
+    </div>
+    <div id="container">
+      <div id="top-playground">
+        <div id="message" class="rubik">Welcome to the game!</div>
+      </div>
+      <div id="cards-table">
+        <div id="deck"></div>
+        <div id="card1"></div>
+        <div id="card2"></div>
+      </div>
+      <div id="bottom-playground">
+        <div id="cards-info">
+          <div id="deck-count" class="rubik card-info"></div>
+          <div id="dealer" class="rubik card-info">Dealer</div>
+          <div id="player" class="rubik card-info">You</div>
+        </div>
+        <div id="games">
+          <div class="caveat game-status-key rubik">Games:</div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>
